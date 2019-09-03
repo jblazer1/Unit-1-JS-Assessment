@@ -64,9 +64,7 @@ function getFirstStarshipName(character) {
  */
 function getSummary(character) {
   // TODO: Add your code here.
-  return `${character.name}, ${parseInt(character.height)}cm, ${parseInt(
-    character.mass
-  )}kg. Featured in ${character.films.length} films.`;
+  return `${character.name}, ${character.height}cm, ${character.mass}kg. Featured in ${character.films.length} films.`;
 }
 // console.log(getSummary(lukeSkywalker));
 /**
@@ -105,9 +103,7 @@ function getStarshipPassengerAndCrewSumTotal(character) {
   let passengers = 0;
   for (let i = 0; i < character.starships.length; i++) {
     crew += character.starships[i]["crew"];
-  }
-  for (let j = 0; j < character.starships.length; j++) {
-    passengers += character.starships[j]["passengers"];
+    passengers += character.starships[i]["passengers"];
   }
   return crew + passengers;
 }
@@ -136,7 +132,7 @@ function getNthFilm(character, filmNumber) {
     }
   }
 }
-console.log(getNthFilm(lukeSkywalker, 3));
+// console.log(getNthFilm(lukeSkywalker, 3));
 
 /**
  * ### Challenge `getCargoCapacityTotal`
@@ -150,8 +146,18 @@ console.log(getNthFilm(lukeSkywalker, 3));
  */
 function getCargoCapacityTotal(character) {
   // TODO: Add your code here.
-}
+  let vcargo = 0;
+  let scargo = 0;
+  for (let i = 0; i < character.vehicles.length; i++) {
+    vcargo += Number(character.vehicles[i].cargo_capacity);
+  }
+  for (let j = 0; j < character.starships.length; j++) {
+    scargo += Number(character.starships[j].cargo_capacity);
+  }
 
+  return vcargo + scargo;
+}
+console.log(getCargoCapacityTotal(lukeSkywalker));
 /**
  * ### Challenge `getFastestStarshipName`
  * Stretch Goal 💪
