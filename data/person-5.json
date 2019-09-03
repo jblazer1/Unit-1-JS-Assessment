@@ -9,21 +9,19 @@
   "gender": "female",
   "homeworld": "Alderaan",
   "films": [
-      "A New Hope",
-      "The Empire Strikes Back",
-      "Return of the Jedi",
-      "Revenge of the Sith",
-      "The Force Awakens"
+    "A New Hope",
+    "The Empire Strikes Back",
+    "Return of the Jedi",
+    "Revenge of the Sith",
+    "The Force Awakens"
   ],
-  "species": [
-      "Human"
-  ],
+  "species": ["Human"],
   "vehicles": [
     {
       "name": "Imperial Speeder Bike",
       "model": "74-Z speeder bike",
       "manufacturer": "Aratech Repulsor Company",
-      "cost_in_credits": 8000,
+      "cost_in_credits": 18000,
       "length": "3",
       "max_atmosphering_speed": "360",
       "crew": 1,
